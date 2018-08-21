@@ -57,7 +57,7 @@ RUN mkdir -p /var/log/supervisor && \
     rm -rf .profile && \
     mkdir .ssh
 
-COPY ssh/id_rsa .ssh/id_rsa
+#COPY ssh/id_rsa .ssh/id_rsa
 COPY bash/profile .profile
 
 # Configure MySql
