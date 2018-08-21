@@ -15,8 +15,8 @@ ENV INFLUXDB_GRAFANA_DB datasource
 ENV INFLUXDB_GRAFANA_USER datasource
 ENV INFLUXDB_GRAFANA_PW datasource
 
-ENV MYSQL_GRAFANA_USER grafana
-ENV MYSQL_GRAFANA_PW grafana
+#ENV MYSQL_GRAFANA_USER grafana
+#ENV MYSQL_GRAFANA_PW grafana
 
 # Fix bad proxy issue
 COPY system/99fixbadproxy /etc/apt/apt.conf.d/99fixbadproxy
@@ -34,8 +34,8 @@ RUN apt-get -y update && \
   git \
   htop \
   libfontconfig \
-  mysql-client \
-  mysql-server \
+#  mysql-client \
+#  mysql-server \
   nano \
   net-tools \
   openssh-server \
@@ -61,9 +61,9 @@ COPY ssh/id_rsa .ssh/id_rsa
 COPY bash/profile .profile
 
 # Configure MySql
-COPY scripts/setup_mysql.sh /tmp/setup_mysql.sh
+#COPY scripts/setup_mysql.sh /tmp/setup_mysql.sh
 
-RUN /tmp/setup_mysql.sh
+#RUN /tmp/setup_mysql.sh
 
 # Install InfluxDB
 RUN wget https://dl.influxdata.com/influxdb/releases/influxdb_${INFLUXDB_VERSION}_amd64.deb && \
