@@ -4,8 +4,8 @@ MAINTAINER Samuele Bistoletti <samuele.bistoletti@gmail.com>
 ENV DEBIAN_FRONTEND noninteractive
 ENV LANG C.UTF-8
 
-ENV http_proxy ""
-ENV https_proxy ""
+ENV http_proxy "http://q462887:lifeftw1@proxy.muc:8080"
+ENV https_proxy "https://q462887:lifeftw1@proxy.muc:8080"
 
 # Default versions
 ENV TELEGRAF_VERSION 1.6.2-1
