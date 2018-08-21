@@ -4,6 +4,9 @@ MAINTAINER Samuele Bistoletti <samuele.bistoletti@gmail.com>
 ENV DEBIAN_FRONTEND noninteractive
 ENV LANG C.UTF-8
 
+ENV http_proxy ""
+ENV https_proxy ""
+
 # Default versions
 ENV TELEGRAF_VERSION 1.6.2-1
 ENV INFLUXDB_VERSION 1.5.2
